@@ -1,0 +1,161 @@
+/* Styling the modal and backdrop */
+
+dialog {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #dedede;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    animation: scale-in 0.4s ease-out;
+  }
+  
+  dialog::backdrop {
+    background: radial-gradient(
+      circle,
+      rgba(238, 118, 116, 0.5) 0%,
+      rgba(238, 118, 116, 0.7) 100%
+    );
+    cursor: pointer;
+  }
+  
+  /* Styling inside of the modal */
+  
+  dialog header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    background: #fff;
+    border-bottom: 1px solid rgba(238, 118, 116, 1);
+  }
+  
+  dialog footer {
+    border-top: 1px solid rgba(238, 118, 116, 1);
+  }
+  
+  dialog > * {
+    padding: 24px;
+  }
+  
+  dialog p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  /* bouncy animation because i can */
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* some basic styling (added to the bottom for convenience) */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #452C38;
+    background: rgba(117, 50, 190, .2);
+  }
+  
+  h1 {
+    margin: 0 0 16px 0;
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 0;
+    font-family: "Merriweather", serif;
+    font-size: 1.4rem;
+  }
+  
+  p {
+    margin: 0 0 24px 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  /* quick and dirty button styling, forgive me ;) */
+  .btn {
+    display: inline-block;
+    font-family: "Merriweather", sans-serif;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    padding: 20px 50px;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: #987284;
+    border-color: #987284;
+    color: #fff;
+    transition: all 0.24s;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:active {
+    background-color: #855F71;
+    border-color: #855F71;
+  }
+  
+  .btn-primary-outline {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    color: #987284;
+    background: #fff;
+    border-width: 2px;
+    border-color: #987284;
+    border-radius: 6px;
+    transition: all 0.24s;
+  }
+  
+  .btn-primary-outline:hover,
+  .btn-primary-outline:active {
+    border-color: #855F71;
+  }
+  
+  .btn-icon {
+    padding: 0;
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    color: #987284;
+  }
+  
+  a {
+    color: darkorange;
+    margin-top: 10px;
+  }
+  
